@@ -52,41 +52,136 @@ struct CarWash            //1) a U.D.T. with a random number of member variables
  1)
  */
 
+struct House
+{
+  bool isOwned = false;
+  int yearsOccupied = 0;
+  int rooms = 2;
+  bool signLease(bool approved = false);
+  struct Room{
+    bool hasCloset = true;
+    bool hasWindows = true;
+    int numOfWindows = 1;
+    int numberOfDoors = 1;
+  };
+  Room bedroom;
+};
 /*
  2)
  */
-
+struct Garage 
+{
+  bool isConnectedToHouse = true;
+  bool isOpen = false;
+  double height = 0;
+  double width = 0; 
+  void closeDoor();
+  void openDoor();
+};
 /*
  3)
  */
+struct Motorcycle{
+  double maxSpeed = 200;
+  double currentSpeed = 0;
+  bool isHelmetMounted = false;
+  int amountOfExhaust = 2;
+  double driveForward();
+  double driveInReverse();
 
+struct Engine{
+  int pistons = 2;
+  bool isLoud = true;
+};
+Engine motorEngine;
+};
 /*
  4)
  */
+struct Tree{
+  int branches = 5;
+  double height = 20;
+  double circumference = 5;
+  void convertCO2();
+  double growInHeight();
 
+};
 /*
  5)
  */
+struct Bird{
+  bool isHunter = false;
+  bool hasTalons = false;
+  double beakLength = 2;
+  bool isChirping = false;
+  bool isFlying = false;
+  bool chirp();
+  bool fly();
 
+
+};
 /*
  6)
  */
-
+struct Human{
+  bool isSane = true;
+  bool hasParents = true;
+  bool hasChildren = false;
+  int fingers = 10;
+  int toes = 10;
+  bool isWalking = false;
+  bool isEating = false;
+  bool walk();
+  bool eat();
+  
+};
 /*
  7)
  */
-
+  struct Sword{
+   struct Sheath{
+     int length =2;
+     };
+   struct Hilt{
+     int length = 2;
+   };
+   Sheath sheath;
+   Hilt hilt;
+  };
 /*
  8)
  */
-
+struct Restaurant {
+  int chefs = 2;
+  int occupants = 0;
+  bool isVegan = false;
+  bool isOpen = false;
+  bool closeRestaurant();
+  bool openRestaurant();
+  void serveDinner();
+};
 /*
  9)
  */
-
+struct Dog{
+  bool isDomesticated = true;
+  int numberOfTeeth = 50;
+  double height = 10;
+  double width = 3;
+  void bite();
+  void bark();
+};
 /*
  10)
  */
+struct Cat{
+  bool isDomesticated = false;
+  int numberOfTeeth = 50;
+  double height = 5;
+  double width = 2;
+  void meow();
+  void knockStuffOver();
+};
 
 #include <iostream>
 int main()
